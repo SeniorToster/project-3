@@ -1,0 +1,139 @@
+.section-first {
+  height: 100vh;
+  min-height: 680px;
+  background-image: url(/src/img/first-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(13, 40, 61);
+
+  &__container {
+    position: relative;
+    height: 100%;
+    padding-top: 236px;
+    padding-bottom: 276px;
+  }
+  &__upper-link {
+    margin-bottom: 57px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      scale: 1.1;
+      transition: all 0.2s ease-in-out;
+      background: rgba($color: $color-dark-blue, $alpha: 0.8);
+    }
+  }
+  &__title {
+    font-size: 80px;
+    line-height: 84px;
+    color: $color-white;
+    font-weight: 700;
+    max-width: 35%;
+    margin-bottom: 40px;
+  }
+  &__subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    color: $color-white;
+    max-width: 32%;
+    font-family: 'SFCompact';
+    font-weight: 400;
+    margin-bottom: 59px;
+  }
+
+  &__bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media (max-height: 1079px) {
+  .section-first {
+    &__container {
+      padding-top: 118px;
+      padding-bottom: 138px;
+    }
+  }
+}
+
+@media (max-height: 889px) {
+  .section-first {
+    &__container {
+      padding-top: 110px;
+      padding-bottom: 124px;
+    }
+    &__upper-link {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 65px;
+      line-height: 66px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  .search {
+    height: 100px;
+    &__field {
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+  .main-slider {
+    &__text {
+      height: 100px;
+    }
+  }
+  .button {
+    font-size: 10px;
+    padding: 26px 58px;
+  }
+}
+
+@media (max-height: 779px) {
+  .section-first {
+    &__container {
+      padding-top: 110px;
+      padding-bottom: 124px;
+    }
+    &__upper-link {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 54px;
+      line-height: 58px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  .search {
+    height: 80px;
+    &__field {
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+  .main-slider {
+    &__text {
+      height: 80px;
+    }
+  }
+  .button {
+    font-size: 10px;
+    padding: 22px 52px;
+  }
+}

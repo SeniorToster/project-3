@@ -1,0 +1,13 @@
+.header-section {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 30px;
+  }
+}

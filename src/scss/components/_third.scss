@@ -1,0 +1,116 @@
+.section-third {
+  min-height: 1080px;
+  min-height: 680px;
+  background-image: url(/src/img/featured.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 60%;
+    background: linear-gradient(
+      180deg,
+      rgba(28, 46, 59, 0.0001) 0%,
+      #091117 100%
+    );
+    opacity: 0.94;
+    @media (min-width: 1921px) {
+      width: 70%;
+    }
+  }
+
+  &__upper-link {
+    margin-bottom: 16px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      scale: 1.1;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &__title {
+    font-family: 'SFProDisplay';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    color: $color-white;
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-family: 'SFCompact';
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    margin-bottom: 106px;
+  }
+  &__wrapper-left {
+    max-width: 30%;
+    padding-top: 604px;
+    position: relative;
+    z-index: 1;
+  }
+  &__wrapper-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: #3c4a51;
+    opacity: 0.94;
+    padding: 126px 133px;
+  }
+  &__title-2 {
+    font-size: 64px;
+    line-height: 80px;
+    color: $color-white;
+    margin-bottom: 96px;
+  }
+}
+.worker {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  &__item {
+    display: flex;
+    gap: 32px;
+    position: relative;
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #e3e3e3;
+      opacity: 0.1;
+    }
+  }
+  &__avatar {
+    border-radius: 100px;
+    width: 48px;
+    height: 48px;
+  }
+  &__slogan {
+    font-family: 'SFProDisplay';
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-white;
+    margin-bottom: 8px;
+  }
+  &__data {
+    font-family: 'SFProText-Regular';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: rgba(255, 255, 255, 0.502293);
+    margin-bottom: 32px;
+  }
+}

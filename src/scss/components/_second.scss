@@ -1,0 +1,52 @@
+.section-second {
+  background-color: $color-white;
+  padding: 150px 0;
+  &__title {
+    margin-bottom: 96px;
+  }
+  &__cart-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  &__cart-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    font-size: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: $color-pastel-blue;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover::before {
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover .section-second__text {
+      transform: translateY(0px);
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &__text {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+    color: $color-white;
+    padding: 0 78px 61px 53px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,20 @@
+@import '_normalize';
+@import '_global'; /* Сброс */
+@import '_fonts'; /* Шрифты */
+@import '_variables'; /* Переменные */
+@import '_overall'; /* переиспользуемые компоненты */
+
+/* Компоненты */
+@import 'components/header';
+@import 'components/_first';
+@import 'components/_second';
+@import 'components/_third';
+@import 'components/_fourth';
+@import 'components/_footer';
+@import 'components/_featured';
+@import 'components/_insp';
+@import 'components/_newsletter';
+
+/* Медия запросы */
+@import '_media';
+

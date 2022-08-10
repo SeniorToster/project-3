@@ -1,0 +1,16 @@
+@import '_normalize';
+@import '_global';
+@import '_fonts';
+
+/* Компоненты */
+@import 'components/_header';
+@import 'components/_footer';
+@import 'components/_become';
+@import 'components/_first';
+@import 'components/_featured';
+@import 'components/_insp';
+@import 'components/_newsletter';
+@import 'components/_slider';
+
+/* Медея запросы */
+@import '_media';
