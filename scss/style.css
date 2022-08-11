@@ -6,7 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("/src/libs/swiper.min.css");
+@import url("../libs/swiper.min.css");
 html {
   line-height: 1.15;
   /* 1 */
@@ -479,12 +479,12 @@ button {
   scale: 1.2;
 }
 .social__link_fb {
-  background-image: url(/src/img/fb.svg);
+  background-image: url(../img/fb.svg);
   height: 20px;
   width: 11px;
 }
 .social__link_tw {
-  background-image: url(/src/img/tw.svg);
+  background-image: url(../img/tw.svg);
   height: 17px;
   width: 20px;
 }
@@ -558,6 +558,7 @@ button {
   border-top-left-radius: 4px;
   width: 68%;
   height: 120px;
+  border-bottom: 1px solid rgba(223, 223, 223, 0.5);
 }
 .search__field {
   width: 100%;
@@ -571,7 +572,7 @@ button {
   color: #1c2e3d;
 }
 .search__btn {
-  background-image: url(/src/img/search.svg);
+  background-image: url(../img/search.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -657,15 +658,51 @@ button {
 }
 
 .swiper-slide {
-  background-color: rgba(160, 160, 160, 0.19);
   border-radius: 8px;
   width: 890px;
   min-height: 550px;
   transition: scale 0.2s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.461617) 100%);
 }
 .swiper-slide-active {
   scale: 1.2;
   transition: scale 0.2s ease-in-out;
+}
+.swiper-slide-active .slide__text {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+}
+.swiper-slide-active .swiper-slide__play {
+  opacity: 1;
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.2s;
+}
+.swiper-slide__play {
+  background-image: url(../img/video-play.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 112px;
+  width: 112px;
+  position: absolute;
+  top: 38px;
+  left: 48px;
+  opacity: 0;
+  scale: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .slide-container {
@@ -675,19 +712,19 @@ button {
   padding: 55px 0 55px 0;
 }
 .slide-1 {
-  background-image: url(/src/img/videos-slider-1.jpg);
+  background-image: url(../img/videos-slider-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .slide-2 {
-  background-image: url(/src/img/videos-slider-2.jpg);
+  background-image: url(../img/videos-slider-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .slide-3 {
-  background-image: url(/src/img/videos-slider-3.jpg);
+  background-image: url(../img/videos-slider-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -698,6 +735,53 @@ button {
   line-height: 40px;
   color: #fff;
   font-weight: 700;
+  padding: 0 0 40px 40px;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.form-sign {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  width: 501px;
+  flex-shrink: 0;
+  transform: translateY(93.99px);
+}
+.form-sign__fields {
+  padding: 76px 72px 66px;
+}
+.form-sign__fields > label {
+  display: flex;
+  flex-direction: column;
+  font-family: "SFProDisplay";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 2px;
+}
+.form-sign__fields > label:not(:last-child) {
+  margin-bottom: 32px;
+}
+.form-sign__fields > label > input {
+  font-size: 20px;
+  line-height: 22px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(28, 46, 61, 0.3);
+}
+.form-sign__btn {
+  font-family: "SFProDisplay";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2.18182px;
+  color: #fff;
+  padding: 40px 72px;
+  background-color: #73afba;
 }
 
 /* переиспользуемые компоненты */
@@ -719,7 +803,7 @@ button {
 .section-first {
   height: 100vh;
   min-height: 680px;
-  background-image: url(/src/img/first-bg.jpg);
+  background-image: url(../../img/first-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -891,9 +975,8 @@ button {
 }
 
 .section-third {
-  min-height: 1080px;
   min-height: 680px;
-  background-image: url(/src/img/featured.jpg);
+  background-image: url(../../img/featured.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1017,6 +1100,42 @@ button {
 }
 .section-fourth__slider-container {
   margin-bottom: 145px;
+}
+
+.section-five {
+  min-height: 680px;
+  height: 798px;
+  padding: 0 30px;
+}
+.section-five__container {
+  background-image: url(../../img/newsletter-cover.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #1c2e3d;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  padding: 0 135px;
+}
+.section-five__box-text {
+  max-width: 368px;
+  margin-bottom: 148px;
+}
+.section-five__title {
+  font-size: 64px;
+  line-height: 80px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.section-five__text {
+  font-family: "SFProText-Regular";
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+  font-weight: 400;
 }
 
 /* Медия запросы */

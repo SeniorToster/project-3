@@ -1,0 +1,36 @@
+.section-five {
+  min-height: 680px;
+  height: 798px;
+  padding: 0 30px;
+
+  &__container {
+    background-image: url(../../img/newsletter-cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-dark-blue;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 135px;
+  }
+  &__box-text {
+    max-width: 368px;
+    margin-bottom: 148px;
+  }
+  &__title {
+    font-size: 64px;
+    line-height: 80px;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+  &__text {
+    font-family: 'SFProText-Regular';
+    font-size: 16px;
+    line-height: 21px;
+    color: $color-white;
+    font-weight: 400;
+  }
+}
