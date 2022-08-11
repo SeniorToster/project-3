@@ -6,7 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("../libs/swiper.min.css");
+@import url('../libs/swiper.min.css');
 html {
   line-height: 1.15;
   /* 1 */
@@ -189,9 +189,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +199,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +210,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -262,8 +262,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type='checkbox'],
+[type='radio'] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -273,8 +273,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -282,7 +282,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -292,7 +292,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -350,7 +350,7 @@ html {
 }
 
 body {
-  font-family: "SFProDisplay", sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   margin: 0;
 }
 
@@ -394,57 +394,65 @@ button {
 
 /* Сброс */
 @font-face {
-  font-family: "Helvetica";
-  src: url("../fonts/HelveticaNeue-Bold.woff2") format("woff2"), url("../fonts/HelveticaNeue-Bold.woff") format("woff");
+  font-family: 'Helvetica';
+  src: url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue-Bold.woff') format('woff');
   font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "Playfair";
-  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-family: 'Playfair';
+  src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFCompact";
-  src: url("../fonts/SFCompactText-Light.woff2") format("woff2"), url("../fonts/SFCompactText-Light.woff") format("woff");
+  font-family: 'SFCompact';
+  src: url('../fonts/SFCompactText-Light.woff2') format('woff2'),
+    url('../fonts/SFCompactText-Light.woff') format('woff');
   font-display: swap;
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFCompact";
-  src: url("../fonts/SFCompactText-Regular.woff2") format("woff2"), url("../fonts/SFCompactText-Regular.woff") format("woff");
+  font-family: 'SFCompact';
+  src: url('../fonts/SFCompactText-Regular.woff2') format('woff2'),
+    url('../fonts/SFCompactText-Regular.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/SFProDisplay-Bold.woff") format("woff");
+  font-family: 'SFProDisplay';
+  src: url('../fonts/SFProDisplay-Bold.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Bold.woff') format('woff');
   font-display: swap;
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("../fonts/SFProDisplay-Heavy.woff2") format("woff2"), url("../fonts/SFProDisplay-Heavy.woff") format("woff");
+  font-family: 'SFProDisplay';
+  src: url('../fonts/SFProDisplay-Heavy.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Heavy.woff') format('woff');
   font-display: swap;
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProDisplay";
-  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-family: 'SFProDisplay';
+  src: url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+    url('../fonts/SFProDisplay-Medium.woff') format('woff');
   font-display: swap;
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "SFProText-Regular";
-  src: url("../fonts/SFProText-Regular.woff2") format("woff2"), url("../fonts/SFProText-Regular.woff") format("woff");
+  font-family: 'SFProText-Regular';
+  src: url('../fonts/SFProText-Regular.woff2') format('woff2'),
+    url('../fonts/SFProText-Regular.woff') format('woff');
   font-display: swap;
   font-weight: 400;
   font-style: normal;
@@ -511,7 +519,7 @@ button {
   position: relative;
 }
 .burger::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
   position: absolute;
@@ -567,7 +575,7 @@ button {
   outline: none;
 }
 .search__field::placeholder {
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-size: 16px;
   color: #1c2e3d;
 }
@@ -612,7 +620,7 @@ button {
 }
 
 .subtitle {
-  font-family: "SFProText-Regular";
+  font-family: 'SFProText-Regular';
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -667,13 +675,17 @@ button {
   overflow: hidden;
 }
 .swiper-slide::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   top: 0;
   right: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.461617) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 50%,
+    rgba(0, 0, 0, 0.461617) 100%
+  );
 }
 .swiper-slide-active {
   scale: 1.2;
@@ -730,7 +742,7 @@ button {
   background-size: cover;
 }
 .slide__text {
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-size: 32px;
   line-height: 40px;
   color: #fff;
@@ -757,7 +769,7 @@ button {
 .form-sign__fields > label {
   display: flex;
   flex-direction: column;
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-weight: 500;
   text-transform: uppercase;
   font-size: 11px;
@@ -775,7 +787,7 @@ button {
   border-bottom: 1px solid rgba(28, 46, 61, 0.3);
 }
 .form-sign__btn {
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 2.18182px;
@@ -803,7 +815,7 @@ button {
 .section-first {
   height: 100vh;
   min-height: 680px;
-  background-image: url(../../img/first-bg.jpg);
+  background-image: url(../img/first-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -837,7 +849,7 @@ button {
   line-height: 16px;
   color: #fff;
   max-width: 32%;
-  font-family: "SFCompact";
+  font-family: 'SFCompact';
   font-weight: 400;
   margin-bottom: 59px;
 }
@@ -940,7 +952,7 @@ button {
   font-size: 0;
 }
 .section-second__cart-item::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -976,20 +988,24 @@ button {
 
 .section-third {
   min-height: 680px;
-  background-image: url(../../img/featured.jpg);
+  background-image: url(../img/featured.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 .section-third::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 70%;
   height: 60%;
-  background: linear-gradient(180deg, rgba(28, 46, 59, 0.0001) 0%, #091117 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(28, 46, 59, 0.0001) 0%,
+    #091117 100%
+  );
   opacity: 0.94;
 }
 @media (min-width: 1921px) {
@@ -1006,7 +1022,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .section-third__title {
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-weight: 700;
   font-size: 48px;
   line-height: 64px;
@@ -1014,7 +1030,7 @@ button {
   margin-bottom: 16px;
 }
 .section-third__subtitle {
-  font-family: "SFCompact";
+  font-family: 'SFCompact';
   font-size: 14px;
   line-height: 21px;
   color: #fff;
@@ -1057,7 +1073,7 @@ button {
   position: relative;
 }
 .worker__item:not(:last-child)::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1073,14 +1089,14 @@ button {
   height: 48px;
 }
 .worker__slogan {
-  font-family: "SFProDisplay";
+  font-family: 'SFProDisplay';
   font-size: 18px;
   line-height: 24px;
   color: #fff;
   margin-bottom: 8px;
 }
 .worker__data {
-  font-family: "SFProText-Regular";
+  font-family: 'SFProText-Regular';
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
@@ -1108,7 +1124,7 @@ button {
   padding: 0 30px;
 }
 .section-five__container {
-  background-image: url(../../img/newsletter-cover.jpg);
+  background-image: url(../img/newsletter-cover.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1131,7 +1147,7 @@ button {
   margin-bottom: 40px;
 }
 .section-five__text {
-  font-family: "SFProText-Regular";
+  font-family: 'SFProText-Regular';
   font-size: 16px;
   line-height: 21px;
   color: #fff;
