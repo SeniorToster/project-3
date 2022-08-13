@@ -34,4 +34,8 @@
     color: $color-white;
     font-weight: 400;
   }
+  &__form {
+    flex-shrink: 0;
+    transform: translateY(93.99px);
+  }
 }

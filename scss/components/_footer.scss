@@ -1,0 +1,110 @@
+.section-footer {
+  border-top: 1px solid rgba(179, 179, 179, 0.5);
+  padding-top: 124px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2.15px;
+    text-transform: uppercase;
+    color: #100e0b;
+    position: relative;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    &::before {
+      content: '';
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 48px;
+      height: 1px;
+      background: #57a773;
+    }
+  }
+  &__list {
+    margin-bottom: 121px;
+  }
+  &__link {
+    font-family: 'SFProDisplay';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 29px;
+    color: #959ea6;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    min-width: 368px;
+    position: relative;
+    &::before {
+      content: '';
+      top: 22px;
+      right: 32px;
+      position: absolute;
+      background-image: url(../img/user.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__field {
+    padding: 22px 32px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid #e4e4e4;
+    font-family: 'SFProDisplay';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.2px;
+    mix-blend-mode: normal;
+  }
+  &__btn {
+    padding: 25px 0;
+    background-color: $color-pastel-blue;
+    font-family: 'SFProDisplay';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2.18182px;
+    text-transform: uppercase;
+    color: $color-white;
+    border-radius: 8px;
+  }
+}
+.footer-bottom {
+  border-top: 1px solid rgba(179, 179, 179, 0.5);
+  padding-top: 32px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__copy {
+    font-family: 'SFProText-Regular';
+    font-size: 13px;
+    line-height: 15px;
+    color: #959ea6;
+    margin-bottom: 32px;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  &__link {
+    font-family: 'SFProText-Regular';
+    font-size: 13px;
+    line-height: 15px;
+    color: #959ea6;
+  }
+}

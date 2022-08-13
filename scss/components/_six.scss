@@ -8,9 +8,130 @@
     margin-bottom: 96px;
     padding: 0 25%;
   }
+}
+.grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__item {
+    background-color: $color-dark-blue;
+    min-height: 500px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 40px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &_big-row {
+      grid-column-end: span 2;
+    }
+    &_big-column {
+      min-height: 710px;
+    }
+    &_img-1 {
+      background-image: url(../img/grid-1.jpg);
+    }
+    &_img-2 {
+      background-image: url(../img/grid-2.jpg);
+    }
+    &_img-3 {
+      background-image: url(../img/grid-3.jpg);
+    }
+    &_img-4 {
+      background-image: url(../img/grid-4.jpg);
+    }
+    &_img-5 {
+      background-image: url(../img/grid-5.jpg);
+      align-items: center;
+    }
+    &_img-6 {
+      background-image: url(../img/grid-6.jpg);
+    }
+    &_img-7 {
+      background-image: url(../img/grid-7.jpg);
+    }
+  }
   &__upper-link {
     position: absolute;
     top: 40px;
     right: 40px;
+  }
+  &__desc {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: $color-white;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-family: 'SFProDisplay';
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 30px;
+  }
+  &__quote {
+    font-family: 'Playfair';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 166px;
+  }
+  &__play {
+    background-image: url(../img/play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &__box-avatars {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__avatar-1 {
+    background-image: url(../img/avatar-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+  }
+  &__avatar-2 {
+    background-image: url(../img/avatar-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    transform: translateX(-20px);
+    z-index: 1;
+  }
+  &__avatar-3 {
+    background-image: url(../img/avatar-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    transform: translateX(-40px);
   }
 }
