@@ -1,7 +1,6 @@
 const swiper1 = document.querySelector('.slide-container'),
   swiper2 = document.querySelector('.swiper-container'),
   burger = document.querySelector('.burger'),
-  close = document.querySelector('.menu__close'),
   menu = document.querySelector('.menu'),
   playButtonsFirst = document.querySelectorAll('.main-slider__play ');
 
@@ -39,11 +38,11 @@ swiperSlider2.on('transitionEnd', function () {
 });
 
 burger.addEventListener('click', () => {
-  menu.classList.add('menu--visible');
+  menu.classList.add('menu_active');
 });
 
-close.addEventListener('click', () => {
-  menu.classList.remove('menu--visible');
+menu.addEventListener('click', () => {
+  menu.classList.remove('menu_active');
 });
 
 playButtonsFirst.forEach(el => {

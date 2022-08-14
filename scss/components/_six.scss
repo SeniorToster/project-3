@@ -60,6 +60,12 @@
     position: absolute;
     top: 40px;
     right: 40px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      scale: 1.1;
+      transition: all 0.2s ease-in-out;
+      background: rgba($color: $color-min-black, $alpha: 0.7);
+    }
   }
   &__desc {
     font-size: 10px;
@@ -97,6 +103,11 @@
     position: absolute;
     top: 40px;
     left: 40px;
+    transition: scale 0.3s ease-in-out;
+    &:hover {
+      transition: scale 0.3s ease-in-out;
+      scale: 1.2;
+    }
   }
   &__box-avatars {
     display: flex;
@@ -112,6 +123,12 @@
     height: 48px;
     width: 48px;
     border-radius: 100px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      z-index: 2;
+      scale: 1.2;
+      transition: all 0.2s ease-in-out;
+    }
   }
   &__avatar-2 {
     background-image: url(../img/avatar-2.jpg);
@@ -123,6 +140,12 @@
     border-radius: 100px;
     transform: translateX(-20px);
     z-index: 1;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      z-index: 2;
+      scale: 1.2;
+      transition: all 0.2s ease-in-out;
+    }
   }
   &__avatar-3 {
     background-image: url(../img/avatar-3.jpg);
@@ -133,5 +156,11 @@
     width: 48px;
     border-radius: 100px;
     transform: translateX(-40px);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      z-index: 2;
+      scale: 1.2;
+      transition: all 0.2s ease-in-out;
+    }
   }
 }

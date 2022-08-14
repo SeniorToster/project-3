@@ -1,12 +1,14 @@
 .section-first {
   height: 100vh;
   min-height: 680px;
-  background-image: url(../img/first-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: rgb(13, 40, 61);
-
+  &__background-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    background-position: center bottom;
+  }
   &__container {
     position: relative;
     height: 100%;
@@ -32,7 +34,7 @@
   }
   &__subtitle {
     font-size: 14px;
-    line-height: 16px;
+    line-height: 18px;
     color: $color-white;
     max-width: 32%;
     font-family: 'SFCompact';

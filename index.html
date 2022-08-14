@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="scss/style.css" />
   </head>
   <body>
+    <div class="menu">
+      <div class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#Become" class="menu__link">Become A Travel</a>
+          </li>
+          <li class="menu__item">
+            <a href="#Stories" class="menu__link">Featured Stories</a>
+          </li>
+          <li class="menu__item">
+            <a href="#Videos" class="menu__link">Featured Videos</a>
+          </li>
+          <li class="menu__item">
+            <a href="#Newsletter" class="menu__link">Newsletter</a>
+          </li>
+          <li class="menu__item">
+            <a href="#Insp" class="menu__link">Inspirations</a>
+          </li>
+          <li class="menu__item">
+            <a href="#Contacts" class="menu__link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <header class="header-section">
       <div class="header-section__container container">
         <div class="header-section__social social">
@@ -17,14 +41,42 @@
                 href="#"
                 class="social__link social__link_fb"
                 aria-label="to go FaceBook"
-              ></a>
+                ><svg
+                  width="11"
+                  height="20"
+                  viewBox="0 0 11 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 0H8C5.23858 0 3 2.23858 3 5V8H0V12H3V20H7V12H10L11 8H7V5C7 4.44772 7.44772 4 8 4H11V0Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
             </li>
             <li class="social__item">
               <a
                 href="#"
                 class="social__link social__link_tw"
                 aria-label="to go Twitter"
-              ></a>
+              >
+                <svg
+                  width="20"
+                  height="17"
+                  viewBox="0 0 20 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20 0.00932958C19.1294 0.6234 18.1656 1.09307 17.1455 1.40024C16.024 0.110728 14.2167 -0.341476 12.6201 0.267924C11.0234 0.877323 9.97709 2.41869 10 4.12751V5.0366C6.75515 5.12074 3.68366 3.57476 1.81818 0.91842C1.81818 0.91842 -1.81818 9.10024 6.36364 12.7366C4.49139 14.0075 2.26105 14.6447 0 14.5548C8.18182 19.1002 18.1818 14.5548 18.1818 4.10024C18.181 3.84701 18.1566 3.59442 18.1091 3.34569C19.0369 2.43069 19.6917 1.27543 20 0.00932958Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -37,6 +89,9 @@
     </header>
     <main class="main">
       <section class="section-first">
+        <video class="section-first__background-video" autoplay loop muted>
+          <source src="./videos/background-v.mp4" type="video/mp4" />
+        </video>
         <div class="section-first__container container">
           <a href="" class="section-first__upper-link upper-link">New Book</a>
           <h1 class="section-first__title">Mother Earth Hosts Our Travels</h1>
@@ -74,7 +129,7 @@
           </div>
         </div>
       </section>
-      <section class="section-second">
+      <section id="Become" class="section-second">
         <div class="section-second__container container">
           <h2 class="section-second__title title title_up">
             Become A Travel Pro In One Easy Lesson
@@ -115,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="section-third">
+      <section id="Stories" class="section-third">
         <div class="section-third__container container">
           <div class="section-third__wrapper-left">
             <a
@@ -178,7 +233,7 @@
           </div>
         </div>
       </section>
-      <section class="section-fourth">
+      <section id="Videos" class="section-fourth">
         <div class="section-fourth__container container">
           <h2 class="section-fourth__title title">Featured Videos</h2>
           <p class="section-fourth__subtitle subtitle">
@@ -204,7 +259,7 @@
           </div>
         </div>
       </section>
-      <section class="section-five">
+      <section id="Newsletter" class="section-five">
         <div class="section-five__container container">
           <div class="section-five__box-text">
             <h2 class="section-five__title">Sign Up Our Newsletter</h2>
@@ -238,7 +293,7 @@
           </form>
         </div>
       </section>
-      <section class="section-six">
+      <section id="Insp" class="section-six">
         <div class="section-six__container container">
           <h2 class="section-six__title title">Inspirations</h2>
           <p class="section-six__subtitle subtitle">
@@ -320,7 +375,7 @@
         </div>
       </section>
     </main>
-    <footer class="section-footer">
+    <footer id="Contacts" class="section-footer">
       <div class="section-footer__container container">
         <nav class="section-footer__column-nav">
           <h2 class="section-footer__title">Company</h2>
