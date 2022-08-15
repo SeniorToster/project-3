@@ -1,42 +1,22 @@
-const swiper1 = document.querySelector('.slide-container'),
-  swiper2 = document.querySelector('.swiper-container'),
-  burger = document.querySelector('.burger'),
-  menu = document.querySelector('.menu'),
-  playButtonsFirst = document.querySelectorAll('.main-slider__play ');
+/* Переключение фонов */
+const play_background = document.querySelector('.main-slider__play_1'),
+  play_background2 = document.querySelector('.main-slider__play_2'),
+  background_v = document.querySelector('.section-first__background-video'),
+  background_img = document.querySelector('.section-first__background-video-2');
 
-let swiperSlider1 = new Swiper(swiper1, {
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  loop: true,
-  spaceBetween: 105,
+play_background.addEventListener('click', () => {
+  background_v.classList.add('section-first__background-video_active');
+  background_img.classList.remove('section-first__background-video-2_active');
 });
 
-let swiperSlider2 = new Swiper(swiper2, {
-  centeredSlides: true,
-  slidesPerView: 1,
-  loop: true,
-  spaceBetween: 10,
-  fadeEffect: {
-    crossFade: true,
-  },
-  effect: 'fade',
-  navigation: {
-    nextEl: '.btn-right',
-    prevEl: '.btn-left',
-  },
+play_background2.addEventListener('click', () => {
+  background_img.classList.add('section-first__background-video-2_active');
+  background_v.classList.remove('section-first__background-video_active');
 });
 
-swiperSlider2.on('transitionEnd', function () {
-  let videos = document.querySelectorAll('.first__slider video');
-  videos.forEach(el => {
-    el.pause();
-    el.currentTime = 0;
-  });
-  playButtonsFirst.forEach(el => {
-    el.style.display = 'block';
-  });
-});
-
+/* Меню */
+const burger = document.querySelector('.burger'),
+  menu = document.querySelector('.menu');
 burger.addEventListener('click', () => {
   menu.classList.add('menu_active');
 });
@@ -45,56 +25,37 @@ menu.addEventListener('click', () => {
   menu.classList.remove('menu_active');
 });
 
-playButtonsFirst.forEach(el => {
-  el.addEventListener('click', e => {
-    let video = e.currentTarget
-      .closest('.main-slider__media')
-      .querySelector('video');
-    video.play();
-    e.currentTarget.style.display = 'none';
-    setTimeout(() => {
-      video.volume = 0.5;
-    }, 1000);
-  });
+/*Слайдер-1*/
+const swiper1 = document.querySelector('.swiper-container-1');
+let swiperSlider2 = new Swiper(swiper1, {
+  centeredSlides: true,
+  allowTouchMove: false,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.main-slider__btn-right',
+    prevEl: '.main-slider__btn-left',
+  },
 });
 
-// inputMask
-let selector = document.querySelectorAll('input[type=tel]');
-
-let im = new Inputmask('+7 (999) 999-99-99');
-
-im.mask(selector);
-
-// validate forms
-let validateForms = function (selector, rules) {
-  new window.JustValidate(selector, {
-    rules: rules,
-    submitHandler: function (form, values, ajax) {
-      var formData = new FormData(form);
-
-      var xhr = new XMLHttpRequest();
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            console.log('Отправлено!');
-          } else {
-          }
-        }
-      };
-
-      // Add any event handlers here...
-      xhr.open('POST', 'mail.php', true);
-      xhr.send(formData);
-
-      form.reset();
-    },
-  });
-};
-
-// validateForms('.mailing__form', { email: { required: true, email: true } }, 'mailing-window', 'materialy s proshloj konferencii');
-validateForms('.newsletter__form', {
-  email: { required: true, email: true },
-  tel: { required: true },
+/*Слайдер-1 текст*/
+const swiper_text = document.querySelector('.swiper-container-text');
+let swiperSlider3 = new Swiper(swiper_text, {
+  centeredSlides: true,
+  allowTouchMove: false,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.main-slider__btn-right',
+    prevEl: '.main-slider__btn-left',
+  },
 });
-validateForms('.subs-form', { email: { required: true, email: true } });
+
+/*Слайдер-2*/
+const swiper2 = document.querySelector('.slide-container');
+let swiperSlider1 = new Swiper(swiper2, {
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  loop: true,
+  spaceBetween: 105,
+});
+
+AOS.init();

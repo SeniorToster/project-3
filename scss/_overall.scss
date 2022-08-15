@@ -215,10 +215,23 @@
 }
 
 .main-slider {
-  &__media {
-    img {
-      border-top-right-radius: 4px;
-      border-top-left-radius: 4px;
+  width: 32%;
+  &__text-box-sliders {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    .swiper-button-disabled {
+      cursor: not-allowed;
+      svg > path {
+        stroke: rgba($color: #ffffff, $alpha: 0.3);
+      }
+      &:hover {
+        scale: 1;
+      }
+    }
+    .swiper-container-text {
+      width: 100%;
+      height: 100%;
     }
   }
   &__text {
@@ -229,9 +242,82 @@
     letter-spacing: 2.18182px;
     text-transform: uppercase;
     color: $color-white;
+    font-weight: 800;
+    background-color: rgba($color: $color-pastel-blue, $alpha: 1);
+  }
+  &__btn-right {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    transition: scale 0.2s ease-in-out;
+    z-index: 2;
+    &:hover {
+      scale: 1.2;
+      transition: scale 0.2s ease-in-out;
+    }
+  }
+  &__btn-left {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    transition: scale 0.2s ease-in-out;
+    z-index: 2;
+    &:hover {
+      scale: 1.2;
+      transition: scale 0.2s ease-in-out;
+    }
+  }
+
+  &__slider-container {
+    height: 280px;
     width: 100%;
-    background-color: $color-pastel-blue;
-    height: 120px;
+  }
+  .swiper-slide {
+    &-active {
+      & .main-slider__play {
+        opacity: 1;
+        scale: 1;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          scale: 1.2;
+        }
+      }
+    }
+  }
+  &__slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_1 {
+      background-image: url(../img/slider-2.jpg);
+    }
+    &_2 {
+      background-image: url(../img/slider-1.jpg);
+    }
+  }
+  &__play {
+    background-image: url(../img/play-2.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 32px;
+    height: 41px;
+    opacity: 0;
+    scale: 0;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -297,7 +383,7 @@
   }
 }
 
-.swiper-slide {
+.slide {
   border-radius: 8px;
   width: 890px;
   min-height: 550px;
@@ -318,56 +404,19 @@
       rgba(0, 0, 0, 0.461617) 100%
     );
   }
-  &-active {
-    scale: 1.2;
-    transition: scale 0.2s ease-in-out;
-    & .slide__text {
-      opacity: 1;
-      transform: translateY(0px);
-      transition: all 0.3s ease-in-out;
-    }
-    & .swiper-slide__play {
-      opacity: 1;
-      scale: 1;
-      transition: all 0.3s ease-in-out;
-      transition-delay: 0.2s;
-    }
-  }
-  &__play {
-    background-image: url(../img/video-play.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 112px;
-    width: 112px;
-    position: absolute;
-    top: 38px;
-    left: 48px;
-    opacity: 0;
-    scale: 0;
-    transition: all 0.3s ease-in-out;
-  }
-}
-.slide {
-  &-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 55px 0 55px 0;
-  }
-  &-1 {
+  &_1 {
     background-image: url(../img/videos-slider-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &-2 {
+  &_2 {
     background-image: url(../img/videos-slider-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &-3 {
+  &_3 {
     background-image: url(../img/videos-slider-3.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -383,6 +432,44 @@
     opacity: 0;
     transform: translateY(200px);
     transition: all 0.3s ease-in-out;
+  }
+
+  &__play {
+    background-image: url(../img/video-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 112px;
+    width: 112px;
+    position: absolute;
+    top: 38px;
+    left: 48px;
+    opacity: 0;
+    scale: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 55px 0 55px 0;
+    .swiper-slide {
+      &-active {
+        scale: 1.2;
+        transition: scale 0.2s ease-in-out;
+        & .slide__text {
+          opacity: 1;
+          transform: translateY(0px);
+          transition: all 0.3s ease-in-out;
+        }
+        & .slide__play {
+          opacity: 1;
+          scale: 1;
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0.2s;
+        }
+      }
+    }
   }
 }
 

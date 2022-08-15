@@ -1,0 +1,188 @@
+@media (max-width: 1679px) {
+  .container {
+    max-width: 1440px;
+  }
+  .search {
+    width: 65%;
+  }
+  .main-slider {
+    width: 35%;
+  }
+  .section-third {
+    &::after {
+      width: 60%;
+    }
+    &__wrapper-right {
+      width: 40%;
+    }
+    &__wrapper-left {
+      width: 60%;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 980px;
+  }
+  .section-first {
+    &__upper-link {
+      margin-bottom: 50px;
+    }
+    &__title {
+      font-size: 76px;
+      line-height: 82px;
+      max-width: 50%;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 50%;
+    }
+  }
+  .upper-link {
+    padding: 17.5px 30.5px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .search {
+    width: 55%;
+  }
+  .main-slider {
+    width: 45%;
+  }
+  .section-third {
+    &__wrapper-right {
+      padding: 100px 80px;
+    }
+    &__wrapper-left {
+      padding-top: 480px;
+      max-width: 50%;
+    }
+  }
+  .section-fourth {
+    padding-top: 100px;
+    &__subtitle {
+      margin-bottom: 100px;
+    }
+    &__wrapper {
+      scale: 0.7;
+    }
+  }
+  .section-five {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      padding: 0 135px;
+    }
+    &__box-text {
+      margin-bottom: 0px;
+      text-align: center;
+    }
+  }
+  .section-six {
+    padding-top: 100px;
+    margin-bottom: 100px;
+    &__subtitle {
+      margin-bottom: 60px;
+    }
+  }
+  .grid {
+    gap: 16px;
+  }
+  .section-footer {
+    &__link {
+      font-size: 14px;
+      line-height: 42px;
+    }
+    &__title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-height: 1079px) {
+  .section-first {
+    &__container {
+      padding-top: 118px;
+      padding-bottom: 138px;
+    }
+  }
+}
+
+@media (max-height: 889px) {
+  .section-first {
+    &__container {
+      padding-top: 110px;
+      padding-bottom: 124px;
+    }
+    &__upper-link {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 65px;
+      line-height: 66px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  .search {
+    height: 100px;
+    &__field {
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+  .main-slider {
+    &__text-box-sliders {
+      height: 100px;
+    }
+  }
+  .button {
+    font-size: 10px;
+    padding: 26px 58px;
+  }
+}
+
+/* ВЫСОТА */
+@media (max-height: 779px) {
+  .section-first {
+    &__container {
+      padding-top: 110px;
+      padding-bottom: 124px;
+    }
+    &__upper-link {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 54px;
+      line-height: 58px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  .search {
+    height: 90px;
+  }
+  .main-slider {
+    &__text-box-sliders {
+      height: 90px;
+    }
+  }
+  .button {
+    font-size: 10px;
+    padding: 22px 52px;
+  }
+}
