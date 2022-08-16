@@ -115,8 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &__avatar-1 {
-    background-image: url(../img/avatar-1.jpg);
+  &__avatar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,42 +124,30 @@
     border-radius: 100px;
     transition: all 0.2s ease-in-out;
     &:hover {
-      z-index: 2;
       scale: 1.2;
       transition: all 0.2s ease-in-out;
     }
-  }
-  &__avatar-2 {
-    background-image: url(../img/avatar-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 48px;
-    width: 48px;
-    border-radius: 100px;
-    transform: translateX(-20px);
-    z-index: 1;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      z-index: 2;
-      scale: 1.2;
-      transition: all 0.2s ease-in-out;
+    &_1 {
+      background-image: url(../img/avatar-1.jpg);
+      &:hover {
+        scale: 1.2;
+        z-index: 2;
+      }
     }
-  }
-  &__avatar-3 {
-    background-image: url(../img/avatar-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 48px;
-    width: 48px;
-    border-radius: 100px;
-    transform: translateX(-40px);
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      z-index: 2;
-      scale: 1.2;
-      transition: all 0.2s ease-in-out;
+    &_2 {
+      background-image: url(../img/avatar-2.jpg);
+      transform: translateX(-20px);
+      z-index: 1;
+      &:hover {
+        z-index: 2;
+      }
+    }
+    &_3 {
+      background-image: url(../img/avatar-3.jpg);
+      transform: translateX(-40px);
+      &:hover {
+        z-index: 2;
+      }
     }
   }
 }

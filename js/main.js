@@ -55,7 +55,11 @@ let swiperSlider1 = new Swiper(swiper2, {
   centeredSlides: true,
   slidesPerView: 'auto',
   loop: true,
-  spaceBetween: 105,
+  spaceBetween: 108,
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+  },
 });
 
 AOS.init();
